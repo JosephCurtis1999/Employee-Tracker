@@ -71,3 +71,20 @@ function startScreen() {
         }
     });
 }
+
+// Add department function 
+
+function addDepartment() {
+
+    inquirer.prompt({
+        type: "input",
+        message: "What is the department name?",
+        name: "deptName"
+    }).then(function(answer) {
+        connection.query("INSERT INTO department (name) VALUES (?)", [answer.deptName], function(err, res) {
+            if (err) throw err;
+            console.table(res)
+            startScreen()
+        })
+    })
+};
