@@ -22,3 +22,23 @@ connection.connect(function(err) {
 
     startScreen()
 });
+
+// user view when logging into node
+function startScreen() {
+    inquirer
+    .prompt({
+        type: "list",
+        choices: [
+            "Add department",
+            "Add role",
+            "Add employee",
+            "View departments",
+            "View roles",
+            "View employees",
+            "View employee role",
+            "Quit"
+        ],
+        message: "What would you like to do?",
+        name: "option"
+    })
+}
