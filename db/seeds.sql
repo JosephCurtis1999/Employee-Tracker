@@ -1,47 +1,8 @@
-DROP DATABASE IF EXISTS employee_info_db;
+INSERT INTO department (name)
+VALUES ("Operations"), ("Finance"), ("Engineering"), ("Marketing"), ("Leadership");
 
--- create datbase
-CREATE DATABASE employee_info_db;
+INSERT INTO role (title, salary, department_id)
+VALUE ("Operations Executive", 40000, 2), ("Analyst", 80000, 3), ("Engineer", 100000, 4), ("Marketing Officer", 70000, 1), ("COO", 300000, 5);
 
--- use database
-USE employee_info_db
-
--- create department table
-CREATE TABLE department (
-
-id INT NOT NULL AUTO_INCREMENT,
-
-name VARCHAR(30) NOT NULL,
-
-PRIMARY KEY(id)
-);
-
--- create role table
-CREATE TABLE role (
-
-id INT NOT NULL AUTO_INCREMENT,
-
-title VARCHAR(30) NOT NULL,
-
-salary DECIMAL(10,2) NOT NULL,
-
-department_id INT NOT NULL,
-
-PRIMARY KEY (id)
-);
-
--- create employee table
-CREATE TABLE employee (
-
-id INT NOT NULL AUTO_INCREMENT,
-
-first_name VARCHAR(30) NOT NULL,
-
-last_name VARCHAR(30) NOT NULL,
-
-role_id INT NOT NULL,
-
-manager_id INT,
-
-PRIMARY KEY (id)
-);
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUE ("Kevin", "Durant", 1, 3), ("Stephen", "Curry", 1, 1), ("Lebron", "James", 3, 2), ("James", "Harden", 5, 2), ("PJ", "Tucker", 4, 2);
