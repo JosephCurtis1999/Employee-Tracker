@@ -187,3 +187,23 @@ function viewDepartment() {
         startScreen();
     });
 }
+
+// view roles function
+function viewRoles() {
+    let query = "SELECT * FROM role";
+    connection.query(query, function(err, res) {
+        if (err) throw err;
+        console.table(res);
+        startScreen();
+    });
+}
+
+// view employees function
+function viewEmployees() {
+    let query = "SELECT * FROM employee";
+    connection.query(query, function(err, res) {
+        if (err) throw err;
+        console.table(res);
+        startScreen();
+    });
+}
