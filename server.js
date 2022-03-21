@@ -37,7 +37,6 @@ function startScreen() {
             "View departments",
             "View roles",
             "View employees",
-            "View employee role",
             "Quit"
         ],
         message: "What would you like to do?",
