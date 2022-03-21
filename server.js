@@ -207,3 +207,9 @@ function viewEmployees() {
         startScreen();
     });
 }
+
+// quit function
+function quit() {
+    connection.end();
+    process.exit();
+}
