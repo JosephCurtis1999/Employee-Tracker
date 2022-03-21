@@ -33,7 +33,7 @@ Step 2 - Open the terminal and install the dependencies using the command npm i
 ## Demo Link
 
 ```md
-Here is the link to the video demonstration: 
+Here is the link to the video demonstration: https://drive.google.com/file/d/1zLR0T_ablRv9Bh-xYSJFXs-KQ3RkbUG8/view?usp=sharing
 
 ```
 
