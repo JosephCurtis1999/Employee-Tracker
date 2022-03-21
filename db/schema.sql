@@ -1,10 +1,10 @@
-DROP DATABASE IF EXISTS employee_info_db;
+DROP DATABASE IF EXISTS employee_db;
 
 -- create datbase
-CREATE DATABASE employee_info_db;
+CREATE DATABASE employee_db;
 
 -- use database
-USE employee_info_db
+USE employee_db
 
 -- create department table
 CREATE TABLE department (

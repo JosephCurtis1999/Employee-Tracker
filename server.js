@@ -13,7 +13,9 @@ const connection = mysql.createConnection({
     user: "root",
 
     password: "UOBCB2022",
-    database: "employee_info_db"
+
+
+    database: "employee_db"
 });
 
 connection.connect(function(err) {
@@ -102,7 +104,7 @@ function addRole() {
         {
             type: "input",
             message: "What is the salary of the role?",
-            name: "roleName"
+            name: "salaryTotal"
         },
         {
             type: "input",
@@ -145,7 +147,7 @@ function addEmployee() {
         },
     ])
     .then(function(answer) {
-        connection.query("INSERT INTO employee (first_name, last_name, role_id, manager_id VALUES (?, ?, ?, ?)", [answer.eeFirstName, answer.eeLastName, answer.roleID, answer.managerID], function(err, res) {
+        connection.query("INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES (?, ?, ?, ?)", [answer.eeFirstName, answer.eeLastName, answer.roleID, answer.managerID], function(err, res) {
            if (err) throw err;
            console.table(res);
            startScreen(); 

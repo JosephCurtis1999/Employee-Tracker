@@ -1,6 +1,32 @@
 {
+  "name": "employee-tracker",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
   "dependencies": {
     "console.table": "^0.10.0",
+    "dotenv": "^16.0.0",
+    "inquirer": "^8.2.1",
     "mysql2": "^2.3.3"
-  }
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "description": "Build a command-line application from scratch to manage a company's employee database using Node.js, Inquirer, and MySQL.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JosephCurtis1999/Employee-Tracker.git" 
+  },
+  "author": "Joseph Curtis"
 }
+
+
+
+
+
+
+
+
+
